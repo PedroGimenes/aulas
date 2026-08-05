@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes as Switch} from "react-router-dom";
+import { BrowserRouter, Route, Routes as Switch, Redirect } from "react-router-dom";
 import { Dashboard, Login } from "../pages";
 
 export const Routes = () => {
@@ -8,7 +8,7 @@ export const Routes = () => {
         <Route path="/entrar" Component={Login}/>
         <Route path="/pagina-inicial" Component={Dashboard}/>
 
-        <Route path="*" Component={() => <Redirect to="/pagina-inicial" />} />
+        <Route path="*" Component={() => <Redirect to="/pagina-inicial" />}/>
       </Switch>
     </BrowserRouter>
   );
